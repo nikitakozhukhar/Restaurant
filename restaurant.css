@@ -347,6 +347,29 @@ a {
 	line-height: 1.2;
 	font-weight: 400;
 	color: #ffc200;
+	position: relative;
+}
+.statistics__title::before{
+	content: "";
+	background-image: url(../Restaurant/img/olive.png);
+	background-repeat: no-repeat;
+	opacity: 0.3;
+	width: 85px;
+	height: 130px;
+	position: absolute;
+	left: -200px;
+	top: 40px;	
+}
+.statistics__title::after{
+	content: "";
+	background-image: url(../Restaurant/img/peper.png);
+	background-repeat: no-repeat;
+	opacity: 0.3;
+	width: 110px;
+	height: 110px;
+	position: absolute;
+	right: -350px;
+	top: 60px;	
 }
 .statistics__subtitle {
 	font-family: 'Montserrat';
@@ -358,6 +381,29 @@ a {
 	margin-top: -10%;
 	margin-bottom: 5%;
 	color: #ffffff;
+	position: relative;
+}
+.statistics__subtitle::before {
+	content: "";
+	background-image: url(../Restaurant/img/petrushka.png);
+	background-repeat: no-repeat;
+	opacity: 0.3;
+	width: 85px;
+	height: 130px;
+	position: absolute;
+	left: -200px;
+	top: ;
+}
+.statistics__subtitle::after {
+	content: "";
+	background-image: url(../Restaurant/img/olive.png);
+	background-repeat: no-repeat;
+	opacity: 0.3;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	right: -200px;
+	top: -30px;
 }
 .statistics-row {
 	display: flex;
