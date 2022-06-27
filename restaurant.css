@@ -1,148 +1,391 @@
+/*Задаем настройки для body, html - height в 100% для того чтобы прибить футер к низу несмотря на количество контента в теге body*/
 body, html {
-height: 100%;
-font-family: 'Montserrat', sans-serif;
-padding: 0px;
-margin: 0;
+	height: 100%;
+	font-family: 'Montserrat', sans-serif;
+	padding: 0px;
+	margin: 0;
+	}
+.wrapper{
+	width: 100%;
+	max-width: 1440px;
+	border: 1px solid black;
+	margin: auto;
+	overflow: hidden;
 }
+	/*Делаем горизонтальную панель навигации*/
 ul, li {
-  list-style: none;
-  display: inline-block;
-  margin: 0;  
-  word-spacing: 68px; 
+	list-style: none;
+	display: inline-block;
+	margin: 0;  
+	word-spacing: 68px; 
 }
+	/*Задаем стили кнопкам панели навигации*/
 a {
-  text-decoration: none;
-  font-size: 25px;
-  line-height: 1.2px;
-  font-weight: 400;
-  color: #ffffff;
+	text-decoration: none;
+	font-size: 25px;
+	line-height: 1.2px;
+	font-weight: 400;
+	color: #ffffff;
 }
-.wrapper {
-  max-width: 1440px;
-  margin: 0px auto;
-  min-height: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
+/*Устанавливаем фоновое изображение*/
+.header-background {
+	width: 100%;
+    height: 796px;
+	background-image: url(../Restaurant/img/background.png);
+	background-repeat: no-repeat; 
+	background-color: #303030;		
 }
-.header {
-  background-color: #303030;
+.header-content-row{
+	display: flex;
+	flex-direction: column;
+	
 }
-.header__background1 {
-  background-image: url(../img/img1.jpg);
-  background-position: top left 0px;
-  background-repeat: no-repeat;
-  z-index: 0;
+/*Делаем флекс онтейнер для навигации и основного контента хэдэра*/
+.toolbar {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	padding: 20px 10px;
 }
-.header__background2 {
-  background-image: url(../img/img2.png);
-  background-position: top left 45%;
-  background-repeat: no-repeat;
-  z-index: 1;
+.toolbar__logo{
+	background-image: url(../Restaurant/img/Logo.png);
+	background-repeat: no-repeat;
+	width: 185px;
+	height: 40px;
+	color: #fff;
 }
-
-.header__background3 {
-  background-image: url(../img/img3.jpg);
-  background-position: top right 0%;
-  background-repeat: no-repeat;
-  z-index: 0;
+.toolbar__menu{
+	color: #fff;
+	margin-left: 50px;
 }
-.header__container {
-  height: 796px;
-  overflow: hidden;
+.toolbar__search img{
+	background-image: url(../Restaurant/img/search.png);
+	width: 30px;
+	height: 30px;
+	color: #fff;
 }
-
-.header-toolbar {
-  
-  display: flex;
-  height: 100px;
-  margin-top: 1%;
-  text-align: center;
+.header-content-row{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	width: 608px;
+	margin-left: 45%;
+	margin-top: 5%;
+	color: #fff;
+	position: relative;
 }
-.header-toolbar__left {
-  
-  display: flex; 
-  margin: auto;
-  margin-left: -3%;
+.header-content-row::before {
+	content: "";
+	background-image: url(../Restaurant/img/olive.png);
+	background-repeat: no-repeat;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 500px;
 }
-.header-toolbar__logo svg{
-  
-  display: inline;
-  width: 100px;
-  height: 100px;
-  fill: #fdfdfd;
-  
-}
-.header-toolbar__title {
-  display: inline-block;
-  color: #ffffff;
-  font-size: 28px;
-  font-family: 'Montserrat', sans-serif;
-  margin: auto;
-
-}
-.header-toolbar__menu {
-  
-  display: inline-block;
-  margin: auto;
- margin-left: 10%;
-
-}
-.header-toolbar__search{
-  display: inline-block;
-  margin: auto;
-}
-.header-toolbar__search svg{
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  fill: #fdfdfd;
-}
-.header__content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-
-}
-.header__title {
-  font-family: 'Grand Hotel', cursive;
-  font-size: 110px;
-  line-height: 1.2px;
-  font-weight: 100;
-  color: #ffc200;
-  margin-right: 20%;
+.header-content-row::after {
+	content: "";
+	background-image: url(../Restaurant/img/garlick.png);
+	background-repeat: no-repeat;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 550px;
+	left: 500px;
 }
 
-.header__subtitle {
-  width: 608px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 29.8px;
-  line-height: 1.2;
-  font-weight: 400;
-  color: #ffffff;
-  margin-right: 15%;
+.title {
+	font-family: 'Grand Hotel', cursive;	
 }
-.header__button {
-  border: 1px solid #ffc200;
-  color: #303030;
-  background-color: #ffc200;
-  padding: 0px 20px;
-  border-radius: 5px;
-  margin-right: 15%;
-  margin: auto;
-  
+.header__title h2 {
+	font-size: 120px;
+	line-height: 1.1px;
+	font-weight: 100;
+	color: #ffc200;	
 }
-.body {
-  flex: 1 1 auto;
-  width: 1440px;
-  height: 2785px;
+.header__title::before {
+	content: "";
+	background-image: url(../Restaurant/img/olive.png);
+	background-repeat: no-repeat;
+	width: 85px;
+	height: 130px;
+	position: absolute;
+	left: -50px;
+	top: -60px;
 }
-.footer {
-  margin: 0px auto;
-  align-items: center;
-  color: #ffffff;
-  background-color: #303030;
-  width: 1440px;
-  height: 796px;
+.header__title::after {
+	content: "";
+	background-image: url(../Restaurant/img/peper.png);
+	background-repeat: no-repeat;
+	width: 110px;
+	height: 110px;
+	position: absolute;
+	right: -50px;
+	top: -50px;
 }
+.subtitle {
+	font-family: 'Montserrat', sans-serif;
+}
+.header__subtitle p{
+	font-size: 29.8px;
+	line-height: 1.2;
+	font-weight: 400;
+	color: #ffffff;
+	width: 608px;
+	margin-top:;
+}
+.header__subtitle::before {
+	content: "";
+	background-image: url(../Restaurant/img/petrushka.png);
+	background-repeat: no-repeat;
+	width: 85px;
+	height: 130px;
+	position: absolute;
+	left: -150px;
+	top: 150px;
+}
+.header__subtitle::after {
+	content: "";
+	background-image: url(../Restaurant/img/olive.png);
+	background-repeat: no-repeat;
+	width: 85px;
+	height: 130px;
+	position: absolute;
+	right: -140px;
+	top: 100px;
+}
+.header__button p{
+	display: flex;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 19.3px;
+	font-weight: 700;
+	line-height: 1.2;
+	text-transform: uppercase;
+	color: #333333;
+	border: 1px solid #ffc200;
+	background-color: #ffc200;
+	width: 245px;
+	height: 50px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 4px;
+	
+}
+.header__button::before {
+	content: "";
+	background-image: url(../Restaurant/img/tomato.png);
+	background-repeat: no-repeat;
+	width: 115px;
+	height: 110px;
+	position: absolute;
+	left: 190px;
+	top: 500px;
+}
+.header__button::after {
+	content: "";
+	background-image: url(../Restaurant/img/onion.png);
+	background-repeat: no-repeat;
+	width: 90px;
+	height: 110px;
+	position: absolute;
+	right: -140px;
+	top: 350px;
+}
+.bestseller {
+	text-align: center;
+}
+.bestseller-block {
+	display: flex;
+	flex-direction: column;
+}
+.bestseller-row {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.bestseller-row__title {
+	font-family: 'Grand Hotel';
+	font-size: 75px;
+	line-height: 1.2;
+	font-weight: 400;
+	color: #333333;
+	width: 60%;	
+}
+.bestseller-row__subtitle {
+	font-family: 'Montserrat';
+	font-size: 25.3px;
+	line-height: 1.2;
+	font-weight: 400;
+	color: #333333;
+	width: 60%;
+}
+.bestseller-cards-row {
+	display: flex;
+}
+.bestseller-card-left, .bestseller-card-center, .bestseller-card-center, .bestseller-card-right{
+	display: flex;
+	flex-direction: column;	
+	align-items: center;
+}
+
+.bestseller-card-left__img {
+	background-image: url(../Restaurant/img/mask_1.png);
+	background-repeat: no-repeat;
+	width: 250px;
+	height: 250px;	
+}
+.bestseller-card-left__title, 
+.bestseller-card-center__title, 
+.bestseller-card-right__title {
+	font-family: 'Grand Hotel';
+	font-size: 41.7px;
+	line-height: 1.2;
+	font-weight: 400;
+	color: #333333;
+}
+.bestseller-card-left__subtitle,
+.bestseller-card-center__subtitle,
+.bestseller-card-right__subtitle{
+	font-family: 'Montserrat';
+	font-size: 16.9px;
+	line-height: 1.2;
+	font-weight: 500;
+	color: #333333;	
+}
+
+.bestseller-card-center__img {
+	background-image: url(../Restaurant/img/mask_2.png);
+	background-repeat: no-repeat;
+	width: 250px;
+	height: 250px;	
+}
+
+.bestseller-card-right__img {
+	background-image: url(../Restaurant/img/mask_3.png);
+	background-repeat: no-repeat;
+	width: 250px;
+	height: 250px;	
+}
+.orientaltaste-background {
+	background-image: url(../Restaurant/img/img2rotate.png);
+	background-position-y: 200px;
+	background-repeat: no-repeat;
+	width: 1440px;
+	height: 1103px;
+	
+	
+}
+.orientaltaste-row {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.orientaltaste-row__img {
+	background-image: url(../Restaurant/img/mask_4.png);
+	background-repeat: no-repeat;
+	width: 470px;
+	height: 460px;
+	margin-top: 10%;
+}
+.orientaltaste-row-text {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-top: 10%;
+	width: 40%;	
+}
+.orientaltaste-text__title {
+	font-family: 'Grand Hotel';
+	font-size: 75px;
+	line-height: 1.2;
+	font-weight: 200;
+	color: #ffc200;
+}
+.orientaltaste-text__subtitle {
+	font-family: 'Montserrat';
+	font-size: 25px;
+	line-height: 1.2;
+	font-weight: 400;
+	color: #ffffff;
+}
+.orientaltaste-text__button {
+	display: flex;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 19.3px;
+	font-weight: 700;
+	line-height: 1.2;
+	text-transform: uppercase;
+	color: #333333;
+	border: 1px solid #ffc200;
+	background-color: #ffc200;
+	align-items: center;
+	justify-content: center;
+	border-radius: 4px;
+	width: 320px;
+	height: 67px;
+}
+.statistics {
+	align-items: center;
+	background-image: url(../Restaurant/img/imgrotate-180.png);
+	background-repeat: no-repeat;
+	background-position-y: 300px;
+	width: 1440px;
+	height: 1103px;
+}
+.statistics-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: #303030;
+	margin-top: -20%;
+}
+.statistics__title {
+	font-family: 'Grand Hotel';
+	font-size: 100px;
+	line-height: 1.2;
+	font-weight: 400;
+	color: #ffc200;
+}
+.statistics__subtitle {
+	font-family: 'Montserrat';
+	font-size: 24.7px;
+	line-height: 1.2;
+	font-weight: 400;
+	width: 60%;
+	text-align: center;
+	margin-top: -10%;
+	margin-bottom: 5%;
+	color: #ffffff;
+}
+.statistics-row {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.statistics-row__numbers {
+	font-family: 'Montserrat';
+	font-size: 50.6px;
+	line-height: 1.2;
+	font-weight: 700;
+	color: #ffc200;
+}
+.statistics-row__outlets, .statistics-row__chef, .statistics-row__menu, .statistics-row__country {
+	width: 235px;
+	height: 235px;
+	border: 5px solid #fff;
+	border-radius: 50%;
+	text-align: center;
+	margin-left: 40px;
+}
+.statistics-row__text {
+	font-family: 'Montserrat';
+	font-size: 28.9px;
+	line-height: 1.2;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+
