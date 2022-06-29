@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--для фиксированной верстви изменил параметры viewport
+	<meta name="viewport" content="width=1440px">--> 
 	<link rel="stylesheet" href="../flex rest/flex.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +14,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Montserrat&display=swap" rel="stylesheet">
 	<title>Your restaurant</title>
+	<!-- -->
 </head>
 <body>
 
@@ -36,7 +39,7 @@
 		    	</div>	
 			</div>
 			<div class="header-content-row">
-				<div class="header__title title"><h2>Title Here</h2> </div>
+				<div class="header__title title"><h3>Title Here</h3> </div>
 				<div class="header__subtitle subtitle"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto tenetur optio adipisci quo!</p> </div>
 				<div class="header__button text"><p>order now</p> </div> 
 			</div>
@@ -45,25 +48,25 @@
 
 	<div class="bestseller">
 		<div class="bestseller-block">
-			<div class="bestseller-row">
-			  	<div class="bestseller-row__title title"><h2>Best seller</h2></div>
-			  	<div class="bestseller-row__subtitle subtitle"> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto tenetur optio adipisci quo!</p></div>
+			<div class="bestseller-header">
+			  	<div class="bestseller-header__title title"><h3>Best seller</h3></div>
+			  	<div class="bestseller-header__subtitle subtitle"> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto tenetur optio adipisci quo!</p></div>
 			</div>
 			<div class="bestseller-cards-row">
-			  <div class="bestseller-card-left">
+			  <div class="bestseller-card-left card">
 					<div class="bestseller-card-left__img"></div>
 					<div class="bestseller-card-left__title title"><h2>Title Here</h2></div>
 					<div class="bestseller-card-left__subtitle subtitle"><p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto tenetur optio adipisci quo!</p></div>
 			  </div>
 
-			  <div class="bestseller-card-center">
+			  <div class="bestseller-card-center card">
 					<div class="bestseller-card-center__img"></div>
 					<div class="bestseller-card-center__title title"><h2>Title Here</h2></div>
 					<div class="bestseller-card-center__subtitle subtitle"><p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto tenetur optio adipisci quo!</p></div>
 					
 			  </div>
 
-			  <div class="bestseller-card-right">
+			  <div class="bestseller-card-right card">
 					<div class="bestseller-card-right__img"></div>
 					<div class="bestseller-card-right__title title"><h2>Title Here</h2></div>
 					<div class="bestseller-card-right__subtitle subtitle"><p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto tenetur optio adipisci quo!</p></div>
@@ -76,40 +79,64 @@
 		<div class="orientaltaste-row">
 			<div class="orientaltaste-row__img"></div>
 			<div class="orientaltaste-row-text">
-				<div class="orientaltaste-text__title"><h2>Oriental taste</h2></div>
-				<div class="orientaltaste-text__subtitle"><p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto tenetur optio adipisci quo!</p></div>
+				<div class="orientaltaste-text__title title"><h3>Oriental taste</h3></div>
+				<div class="orientaltaste-text__subtitle subtitle"><p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto tenetur optio adipisci quo!</p></div>
 				<div class="orientaltaste-text__button"><p>order now</p></div>
 			</div>
 		</div>
 	</div>
 	<div class="statistics">
 		<div class="statistics-column">
-			<div class="statistics__title title"><h2>Statistics</h2></div>
+			<div class="statistics__title title"><h3>Statistics</h3></div>
 			<div class="statistics__subtitle subtitle"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, modi nobis quaerat fugiat explicabo!</p></div>
 			<div class="statistics-row">
-				<div class="statistics-row__outlets">
+				<div class="statistics-row__outlets circle">
 					<div class="statistics-row__numbers"><p>123</p></div>
 					<div class="statistics-row__text"><p>outlets</p></div> 
 				</div>
-				<div class="statistics-row__chef">
+				<div class="statistics-row__chef circle">
 					<div class="statistics-row__numbers"><p>100</p></div>
 					<div class="statistics-row__text"><p>chef</p></div> 
 				</div>
-				<div class="statistics-row__menu">
+				<div class="statistics-row__menu circle">
 					<div class="statistics-row__numbers"><p>300</p></div>
 					<div class="statistics-row__text"><p>menu</p></div> 
 				</div>
-				<div class="statistics-row__country">
+				<div class="statistics-row__country circle">
 					<div class="statistics-row__numbers"><p>30</p></div>
 					<div class="statistics-row__text"><p>country</p></div> 
 				</div>
 			</div>
 		</div>
 	</div>
+	
+	<div class="chickengrill-background">
+		<div class="chickengrill-row">
+			<div class="chickengrill-text">
+				<div class="chickengrill-text__title title"><h3>Chicken Grill</h3></div>
+				<div class="chickengrill-text__subtitle subtitle"><p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto tenetur optio adipisci quo!</p></div>
+				<div class="chickengrill-text__button"><p>order now</p></div>	
+			</div>
+			<div class="chickengrill-img"></div>
+		</div>
 	</div>
-	<div class="chickengrill"></div>
-	<div class="lenorafilds"></div>
-	<div class="subscribe"></div>
+	<div class="lenorafilds-background-img">
+		<div class="lenorafilds-background-color">
+			<div class="lenorafilds-content">
+				<div class="lenorafilds__subtitle subtitle"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur doloremque fugiat esse!</p> </div>
+				<div class="lenorafilds__title title"><h3>Lenora Filds</h3> </div>
+			</div>
+		</div>
+	</div>
+	<div class="subscribe">
+		<div class="subscribe-content-column">
+			<div class="subscribe-title title"><h3>Subscribe</h3> </div>
+			<div class="subscribe-subtitle subtitle"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores cum voluptate beatae ad architecto molestiae id amet nulla rerum!</p></div>
+			<div class="subscribe-input">
+				<input type="email" name="email" placeholder="Your Email" class="input-text"> <input type="submit" value="Subscribe" class="input-button">
+			</div>
+		</div>
+	</div>
 	<div class="footer"></div>
 
 </div>
