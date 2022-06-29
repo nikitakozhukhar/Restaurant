@@ -6,17 +6,17 @@ body, html {
 	margin: 0;
 	}
 .wrapper{
-	width: 100%;
-	max-width: 1440px;
-	border: 1px solid black;
+	/*width: 100%;*/
+	max-width: 1440px; /*для теста фиксированной верстки поменял на min-width, до этого было max-width*/
 	margin: auto;
 	overflow: hidden;
+	padding: 0px 0px 10px 0px;
 }
 	/*Делаем горизонтальную панель навигации*/
 ul, li {
 	list-style: none;
-	display: inline-block;
-	margin: 0;  
+	display: flex;
+	margin-left: 70px;  
 	word-spacing: 68px; 
 }
 	/*Задаем стили кнопкам панели навигации*/
@@ -35,11 +35,7 @@ a {
 	background-repeat: no-repeat; 
 	background-color: #303030;		
 }
-.header-content-row{
-	display: flex;
-	flex-direction: column;
-	
-}
+
 /*Делаем флекс онтейнер для навигации и основного контента хэдэра*/
 .toolbar {
 	display: flex;
@@ -69,7 +65,7 @@ a {
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: flex-start;
-	width: 608px;
+	width: 42%;
 	margin-left: 45%;
 	margin-top: 5%;
 	color: #fff;
@@ -98,7 +94,7 @@ a {
 .title {
 	font-family: 'Grand Hotel', cursive;	
 }
-.header__title h2 {
+.header__title h3 {
 	font-size: 120px;
 	line-height: 1.1px;
 	font-weight: 100;
@@ -132,8 +128,7 @@ a {
 	line-height: 1.2;
 	font-weight: 400;
 	color: #ffffff;
-	width: 608px;
-	margin-top:;
+	width: 100%;
 }
 .header__subtitle::before {
 	content: "";
@@ -165,7 +160,8 @@ a {
 	color: #333333;
 	border: 1px solid #ffc200;
 	background-color: #ffc200;
-	width: 245px;
+	width: 100%;
+	padding: 0px 40px;
 	height: 50px;
 	align-items: center;
 	justify-content: center;
@@ -199,12 +195,12 @@ a {
 	display: flex;
 	flex-direction: column;
 }
-.bestseller-row {
+.bestseller-header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
-.bestseller-row__title {
+.bestseller-header__title {
 	font-family: 'Grand Hotel';
 	font-size: 75px;
 	line-height: 1.2;
@@ -212,7 +208,7 @@ a {
 	color: #333333;
 	width: 60%;	
 }
-.bestseller-row__subtitle {
+.bestseller-header__subtitle {
 	font-family: 'Montserrat';
 	font-size: 25.3px;
 	line-height: 1.2;
@@ -223,7 +219,7 @@ a {
 .bestseller-cards-row {
 	display: flex;
 }
-.bestseller-card-left, .bestseller-card-center, .bestseller-card-center, .bestseller-card-right{
+.card {
 	display: flex;
 	flex-direction: column;	
 	align-items: center;
@@ -272,9 +268,7 @@ a {
 	background-position-y: 200px;
 	background-repeat: no-repeat;
 	width: 1440px;
-	height: 1103px;
-	
-	
+	height: 1103px;	
 }
 .orientaltaste-row {
 	display: flex;
@@ -296,14 +290,12 @@ a {
 	width: 40%;	
 }
 .orientaltaste-text__title {
-	font-family: 'Grand Hotel';
 	font-size: 75px;
 	line-height: 1.2;
 	font-weight: 200;
 	color: #ffc200;
 }
 .orientaltaste-text__subtitle {
-	font-family: 'Montserrat';
 	font-size: 25px;
 	line-height: 1.2;
 	font-weight: 400;
@@ -322,16 +314,17 @@ a {
 	align-items: center;
 	justify-content: center;
 	border-radius: 4px;
-	width: 320px;
+	width: 40%;
+	padding: 0px 40px;
 	height: 67px;
 }
 .statistics {
 	align-items: center;
 	background-image: url(../Restaurant/img/imgrotate-180.png);
 	background-repeat: no-repeat;
-	background-position-y: 300px;
+	background-position-y: 480px;
 	width: 1440px;
-	height: 1103px;
+	height: 1500px;
 }
 .statistics-column {
 	display: flex;
@@ -342,7 +335,6 @@ a {
 	margin-top: -20%;
 }
 .statistics__title {
-	font-family: 'Grand Hotel';
 	font-size: 100px;
 	line-height: 1.2;
 	font-weight: 400;
@@ -372,7 +364,6 @@ a {
 	top: 60px;	
 }
 .statistics__subtitle {
-	font-family: 'Montserrat';
 	font-size: 24.7px;
 	line-height: 1.2;
 	font-weight: 400;
@@ -392,7 +383,6 @@ a {
 	height: 130px;
 	position: absolute;
 	left: -200px;
-	top: ;
 }
 .statistics__subtitle::after {
 	content: "";
@@ -417,7 +407,7 @@ a {
 	font-weight: 700;
 	color: #ffc200;
 }
-.statistics-row__outlets, .statistics-row__chef, .statistics-row__menu, .statistics-row__country {
+.circle {
 	width: 235px;
 	height: 235px;
 	border: 5px solid #fff;
@@ -433,5 +423,176 @@ a {
 	text-transform: uppercase;
 	color: #ffffff;
 }
+.chickengrill-background {
+	text-align: center;
+	height: 796px;
+	
+}
+.chickengrill-row {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin-top: -45%;
+}
+.chickengrill-text {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 50%;
+	margin-left: 11%;
+}
+.chickengrill-text__title {
+	font-size: 75px;
+	line-height: 1.2;
+	font-weight: 200;
+	color: #ffc200;	
+}
+.chickengrill-text__subtitle {
+	font-size: 25px;
+	line-height: 1.2;
+	font-weight: 400;
+	color: #ffffff;
+	width: 50%;
+	text-align: left;	
+}
+.chickengrill-text__button {
+	display: flex;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 19.3px;
+	font-weight: 700;
+	line-height: 1.2;
+	text-transform: uppercase;
+	color: #333333;
+	border: 1px solid #ffc200;
+	background-color: #ffc200;
+	align-items: center;
+	justify-content: center;
+	border-radius: 4px;
+	width: 30%;
+	padding: 0px 40px;
+	height: 50px;
+}
+.chickengrill-img {
+	background-image: url(../Restaurant/img/mask_5.png);
+	background-repeat: no-repeat;
+	width: 470px;
+	height: 470px;
+}
+.lenorafilds-background-img {
+	background-image: url(../Restaurant/img/lenora_img.png);
+	width: 1440px;
+	height: 900px;
+	margin-top: -5%;
+}
+.lenorafilds-background-color {
+	background-color: rgba(255, 194, 0, 0.9);
+	width: 1440px;
+	height: 900px;
+	margin-top: -5%;
+	opacity: 0.7;
+	text-align: center;
+}
+.lenorafilds-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+}
+.lenorafilds__subtitle {
+	font-size: 44.9px;
+	line-height: 1.2;
+	font-weight: 400;
+	color: black;
+	width: 63%;
+	margin-top: 15%;
+}
+.lenorafilds__title {
+	font-size: 74.2px;
+	line-height: 1.2;
+	font-weight: 400;
+	color: black;
+	width: 23%;
+	margin-top: -5%;
+}
+.subscribe {
+	background-image: url(../Restaurant/img/Background-veg.png);
+	width: 1440px;
+	height: 796px;
+	text-align: center;
+	width: 1440px;
+	height: 796px;
+}
+.subscribe-content-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.subscribe-title {
+	font-size: 100px;
+	line-height: 1.2;
+	font-weight: 400;
+	color: #333333;
+	margin-top: 1%;
+}
 
-
+.subscribe-subtitle {
+	font-size: 29.8px;
+	line-height: 1.2;
+	font-weight: 400;
+	color: #333333;
+	margin-top: -10%;
+	width: 58%;
+}
+.input-text {
+	border: none;
+	width: 540px;
+	height: 65px;
+	color: gray;
+	padding: 0px 0px 0px 30px;
+	font-size: 25px;
+	line-height: 1.2;
+	font-weight: 400;
+	color: gray;
+}
+.input-text:hover {
+	border: 1px solid lightblue;
+	width: 540px;
+	height: 65px;
+	color: #333333;
+	padding: 0px 0px 0px 30px;
+	font-size: 25px;
+	line-height: 1.2;
+	font-weight: 400;
+}
+.input-text:active {
+	border: 1px solid lightblue;
+	width: 540px;
+	height: 65px;
+	padding: 0px 0px 0px 30px;
+	font-size: 25px;
+	line-height: 1.2;
+	font-weight: 400;
+	color: #333333;
+}
+input::placeholder {
+	transition: 0.5s; /* Время трансформации */
+	color: #aaa; /* Цвет подсказки */
+  }
+input:focus::placeholder { 
+	font-size: 10px; /* Размер шрифта */
+	transform: translateX(-100px); /* Сдвигаем вверх */
+  }
+  .input-button {
+	width: 220px;
+	height: 65px;
+	background-color: #ffc200;
+	border: none;
+	border-radius: 0px 4px 4px 0px;
+	font-size: 25px;
+	line-height: 1.2;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #333333;
+}
+	
